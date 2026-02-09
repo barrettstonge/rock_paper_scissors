@@ -6,29 +6,34 @@ function getRandomInt(max) {
 function getComputerChoice(x){
     switch (x) {
         case 0:
-            return "Rock"
+            return "rock"
         case 1:
-            return "Paper"
+            return "paper"
         case 2:
-            return "Scissors"
+            return "scissors"
         default:
             return "oops"
     }
 }
 
 
-console.log(getComputerChoice(getRandomInt(3)))
+/*console.log(getComputerChoice(getRandomInt(3)))*/
 
-let sign = window.prompt("Would you like to play rock, paper, scissors? yes/no");
-  if (sign.toLowerCase() === "yes") { sign = prompt("Alright, let\'s play! rock, paper or scissors?(case sensitive)");} 
+let getHumanChoice = window.prompt("Would you like to play rock, paper, scissors? yes/no");
+  if (getHumanChoice.toLowerCase() === "yes") { getHumanChoice = prompt("Alright, let\'s play! rock, paper or scissors?(case sensitive)"); (prompt(getComputerChoice(getRandomInt(3))))} 
   
-    else if (sign === null) {
-    sign = prompt ("OK, maybe next time.");}
+    else if (getHumanChoice === null) {
+    getHumanChoice = prompt ("OK, maybe next time.");}
     
-    else if (sign.toLowerCase() === "") {
-    sign = prompt("Don't be shy, enter your call!");}
+    else if (getHumanChoice.toLowerCase() === "") {
+    getHumanChoice = prompt("Don't be shy, enter your call! rock, paper or scissors?(case sensitive)");(prompt(getComputerChoice(getRandomInt(3))));}
     
-    else if (sign === "no")( sign = prompt ("Well that\'s a shame, if you change your mind, hit refresh and we can play."))
+    else if (getHumanChoice === "no"){ getHumanChoice = prompt ("Well that\'s a shame, if you change your mind, hit refresh and we can play.");}
+
+console.log(getHumanChoice)
+
+ 
+
 
 
  
