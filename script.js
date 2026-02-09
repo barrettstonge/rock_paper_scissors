@@ -32,6 +32,10 @@ let getHumanChoice = window.prompt("Would you like to play rock, paper, scissors
 
 console.log(getHumanChoice)
 
+let score = {
+    humanScore: 0, computerScore: 0
+};
+
  
 
 
