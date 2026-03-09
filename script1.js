@@ -1,6 +1,6 @@
 console.log("Hello world!")
 let score = {
-    humanScore: 0, computerScore: 0
+    humanScore: 0, computerScore: 0, tie:0
 };
 function playGame() {
     const human = getHumanChoice();
@@ -52,7 +52,7 @@ function playGame() {
         if (_humanChoice === "rock" && computerSelection === "scissors") { score.humanScore++; return window.alert(`You win! ${_humanChoice} beats ${computerSelection}`); }
         else if (_humanChoice === "paper" && computerSelection === "rock") { score.humanScore++; return window.alert(`You win! ${_humanChoice} beats ${computerSelection}`); }
         else if (_humanChoice === "scissors" && computerSelection === "paper") { score.humanScore++; return window.alert(`You win! ${_humanChoice} beats ${computerSelection}`); }
-        else if (_humanChoice === computerSelection) { return window.alert("Tie!"); }
+        else if (_humanChoice === computerSelection) { score.tie++;return window.alert("Tie!"); }
         else if (_humanChoice === null) { return window.alert("You lose!"); }
         else if (_humanChoice === "") { return window.alert("You lose!"); }
         else if (_humanChoice === "no") { return window.alert("You lose!"); }
@@ -68,7 +68,7 @@ function fiveRound() {
     for (let i = 0; i < 5; i++) {
         playGame();
     }
-    window.alert(`Final score — You: ${score.humanScore}, Computer: ${score.computerScore}`);
+    window.alert(`Final score — You: ${score.humanScore}, Computer: ${score.computerScore}, Tie: ${score.tie}`);
 }
 
 
